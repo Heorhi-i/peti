@@ -1,35 +1,70 @@
-﻿#include "windows.h"
+﻿
 #include <stdio.h>
 #include <iostream>
-//void bb();
-using namespace std;
-const int b = 666;
-string sarry[b];
-string val;
+#include<string>
+#include<stdlib.h>
 
+using namespace std;
+
+const int b = 666;
+string sarryL[b];
+string sarryP[b];
+string ff;
+int numK;
+
+string bb(string val) {
+	int numLK1;
+	if (val.size() < 10 && val.size() > 5) {
+		int i;
+		for (i = 0; i < b; ++i)
+		{
+			if (val == sarryL[i]) {
+				string ff = "good work, you are ";
+				cout << ff;
+				numLK1 = i;
+				cout << "[" << numLK1 << "]" << endl;
+				string numLK = to_string(numLK1);
+				break; return numLK;
+			}
+		}
+	}
+	else {
+		cout << "tru enuf" << endl;
+		return "error1010";
+	}
+}
 int main()
 {
-	void bb();
-	sarry[5] = "332000";
-	bb();
-	
-	Sleep(5000);
+	void gg();
+	cout << "Hi user, input your birthdey data" <<endl;
+	sarryL[5] = "332000";
+	string valik;
+	cin >> valik;
+	string numL=bb(valik);
+	cout << numL;
+	string pass1 = "pass" + numL;
+	cout << pass1;
+	numK = atoi(numL.c_str());
+	cout << numK;
+		sarryP[numK] = pass1;
+		cout << sarryP[numK];
+	gg();
 	return 1;
 }
-void bb() {
-	cin >> val;
+void gg() {
+	string val1;
+	cout << "send your - pass" << endl;
+	cin >> val1;
 	int i;
 	for (i = 0; i < b; ++i)
 	{
-		if (val == sarry[i]) {
-			string ff = "good work, you are ";
-			cout << ff;
-			cout << "[" << i << "]";
-			break;
+		if (val1 == sarryP[i]) {
+			break; cout << "good work"; return;
 		}
 	}
-	bb();
+	gg();
 }
+
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
 
